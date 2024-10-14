@@ -1,9 +1,12 @@
-
+.weeks-specials_wrapper {
+    min-height: 500px;
+}
 
 .title-and-online_btn {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 25em;
 }
 
 .online-menu_btn {
@@ -11,8 +14,8 @@
     color: #000000;
     border: none;
     border-radius: 0.5rem;
-    padding: 10px 20px;
     font-size: 0.8rem;
+    padding: 10px 20px;
 }
 
 .menu-cards {
@@ -20,16 +23,18 @@
     display: flex;
     /* justify-content: space-evenly; */
     justify-content: center;
-    gap: 30px;
-
+    gap: 5em;
     margin-top: 1rem;
 }
 
 .food-item_card {
-    width: 170px;
+    width: 200px;
+    height: 100%;
     background: #f5f5f5;
     border-radius: 0.5rem 0.5rem 0 0;
-    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .food-item_card > img {

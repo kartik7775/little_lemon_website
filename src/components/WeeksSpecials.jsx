@@ -13,8 +13,8 @@ const WeeksSpecials = () => {
         {
             id: 2,
             imageUrl: "src/assets/bruchetta.png",
-            alt: "Bruchetta",
-            dishName: "bruchetta",
+            alt: "bruchetta",
+            dishName: "Bruchetta",
             price: "$5.99",
             desc: "Bruchetta ipsum dolor sit amet consectetur, adipisicing elit. Tempora facere quia ad unde accusamus sequi.",
         },
@@ -29,7 +29,7 @@ const WeeksSpecials = () => {
     ];
 
     return (
-        <div className="weeks-special_wrapper" id="menu">
+        <div className="weeks-specials_wrapper" id="menu">
             <div className="title-and-online_btn">
                 <h1 className="section-title">This weeks specials!</h1>
                 <button className="online-menu_btn">Online Menu</button>

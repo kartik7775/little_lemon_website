@@ -3,12 +3,11 @@ import "./styles/hero.css";
 const Hero = () => {
     return (
         <>
-            <div className="hero-section-wrapper">
-               <div className="hero-background"></div>
+            <div className="hero-section_wrapper">
                 <div className="hero-text">
-                    <h1 className="brand-title">Little Lemon</h1>
+                    <h1 className="hero-brand-title">Little Lemon</h1>
                     <h3 className="restaurant-location">Chicago</h3>
-                    <p className="description-text">
+                    <p className="hero-description-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Quidem, vero. Repellendus aut autem commodi a, animi id
                         eveniet laudantium. Perspiciatis deserunt.

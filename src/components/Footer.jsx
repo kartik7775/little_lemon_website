@@ -3,7 +3,6 @@ import "./styles/footer.css";
 const Footer = () => {
     return (
         <footer>
-            <div className="footer-background"></div>
             <div className="footer-section_wrapper">
                 <div className="footer-image">
                     <img src="src\assets\Mario and Adrian A.jpg" alt="Chefs" />

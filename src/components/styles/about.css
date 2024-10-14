@@ -2,28 +2,45 @@
 .about-section_wrapper {
      display: flex;
      align-items: center;
-     justify-content: space-around;
+     /* justify-content: space-around; */
+     justify-content: center;
+     gap: 5em;
+     min-height: 400px;
+}
+
+.about-text {
+     max-width: 400px;
+}
+
+.about-brand-title {
+     margin-top: 0;
+     margin-bottom: -15px;
+     font-size: 32px;
+     line-height: 1;
+     color: #f3d219;
+}
+
+.about-description-text {
+     margin-bottom: 25px;
+     font-family: sans-serif;
+     line-height: 1.2;
+     letter-spacing: 1px;
 }
 
 .about-image {
-     position: relative;
+     display: flex;
 }
 
 .front-image>img{
      width: 200px;
      height: 250px;
-     object-fit: cover;
-     border-radius: 0.75rem;
-     margin-top: 40px;
+     object-fit: fill;
+     border-radius: 0.75rem 0 0 0.75rem;
 }
 
 .back-image>img{
      width: 200px;
      height: 250px;
      object-fit: cover;
-     border-radius: 0.75rem;
-     margin-top: 40px;
-     position: absolute;
-     top: -25px;
-     right: -70px;
+     border-radius: 0 0.75rem 0.75rem 0;
 }

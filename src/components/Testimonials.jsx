@@ -34,14 +34,13 @@ const Testimonials = () => {
 
     return (
         <div className="testimonials-section_wrapper">
-            <div className="testimonials-background"></div>
 
             <h1 className="section-heading">Testimonials</h1>
 
             <div className="review-cards">
                 {Testimonials.map((testi) => (
                     <div className="review-card" key={testi.id}>
-                        <p className="rating"> ⭐ {testi.rating} </p>
+                        <p className="rating"> ⭐ {testi.rating}</p>
                         <div className="avatar-and-name">
                             <img
                                 src={testi.avatar}
