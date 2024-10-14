@@ -1,0 +1,29 @@
+
+.about-section_wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+.about-image {
+     position: relative;
+}
+
+.front-image>img{
+     width: 200px;
+     height: 250px;
+     object-fit: cover;
+     border-radius: 0.75rem;
+     margin-top: 40px;
+}
+
+.back-image>img{
+     width: 200px;
+     height: 250px;
+     object-fit: cover;
+     border-radius: 0.75rem;
+     margin-top: 40px;
+     position: absolute;
+     top: -25px;
+     right: -70px;
+}
