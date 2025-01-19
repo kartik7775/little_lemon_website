@@ -1,31 +1,36 @@
-import './styles/navbar.css';
+import "./styles/navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
     return (
         <nav>
             <div className="logo">
                 <img src="src\assets\Logo.svg" alt="little-lemon" />
             </div>
+
             <div className="navbar">
                 <ul className="nav-list">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#menu">Menu</a>
-                    </li>
-                    <li>
-                        <a href="#reservations">Reservations</a>
-                    </li>
-                    <li>
-                        <a href="#order-online">Order Online</a>
-                    </li>
-                    <li>
-                        <a href="#login">Login</a>
-                    </li>
+                    <NavLink to="/">
+                        <li>Home</li>
+                    </NavLink>
+                    <NavLink to="#about">
+                        <li>About</li>
+                    </NavLink>
+                    <NavLink to="#menu">
+                        <li>Menu</li>
+                    </NavLink>
+                    <NavLink to="#reservations">
+                        <li>Reservations</li>
+                    </NavLink>
+                    <NavLink to="/order-online">
+                        <li>Order Online</li>
+                    </NavLink>
+                    <NavLink to="/login">
+                        <button onClick={() => navigate('/login', {replace:true})}>Login</button>
+                    </NavLink>
                 </ul>
             </div>
         </nav>

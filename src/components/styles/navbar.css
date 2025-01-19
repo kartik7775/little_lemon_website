@@ -7,16 +7,33 @@ nav {
 
 .navbar .nav-list {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    list-style: none;
 }
 
-.nav-list li:not(:last-child) {
+/* .nav-list li:not(:last-child) {
     margin-right: 15px;
-}
-
-.nav-list > li > a {
+    } */
+    
+    .nav-list li {
+     list-style: none;
      color: black;
      text-decoration: none;
      font-family: sans-serif;
+     cursor: pointer;
+     margin-left: 10px;
+}
+
+/* a.active {
+    color: gold;
+} */
+
+.nav-list button {
+    padding: 5px 20px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: gold;
+    font-size: 1rem;
+    cursor: pointer;
 }

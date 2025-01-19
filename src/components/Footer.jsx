@@ -68,7 +68,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p className="copyright">All rights reserved | Little Lemon &copy; 2024</p>
+            <p className="copyright">
+                All rights reserved | Little Lemon &copy; 2024
+            </p>
         </footer>
     );
 };

@@ -1,24 +1,27 @@
 import "./App.css";
+import { Home, Login, OrderOnline } from "./components/index";
 import {
-    Header,
-    Hero,
-    WeeksSpecials,
-    Testimonials,
-    About,
-    Footer,
-} from "./components/index";
+    Route,
+    RouterProvider,
+    createBrowserRouter,
+    createRoutesFromElements,
+} from "react-router-dom";
+import RootLayout from "./layout/RootLayout";
 
 function App() {
-    return (
-        <>
-            <Header />
-            <Hero />
-            <WeeksSpecials />
-            <Testimonials />
-            <About />
-            <Footer />
-        </>
+    const router = createBrowserRouter(
+        createRoutesFromElements(
+            <Route path="/" element={<RootLayout />}>
+                <Route index element={<Home />} />
+
+                <Route path="order-online" element={<OrderOnline />} />
+
+                <Route path="login" element={<Login />} />
+            </Route>
+        )
     );
+
+    return <RouterProvider router={router} />;
 }
 
 export default App;
