@@ -61,9 +61,18 @@
         padding-bottom: 10px;
     }
     .review-cards {
+        justify-content: center;
         flex-wrap: wrap;
+        margin: 1rem;
     }
     .section-heading {
         margin: 15px;
+    }
+}
+
+@media (max-width: 670px) {
+    .testimonials-section_wrapper {
+        margin-top: 40px;
+        padding-bottom: 10px;
     }
 }

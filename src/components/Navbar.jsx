@@ -2,7 +2,6 @@ import "./styles/navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
     const navigate = useNavigate();
 
     return (
@@ -29,7 +28,13 @@ const Navbar = () => {
                         <li>Order Online</li>
                     </NavLink>
                     <NavLink to="/login">
-                        <button onClick={() => navigate('/login', {replace:true})}>Login</button>
+                        <button
+                            onClick={() =>
+                                navigate("/login", { replace: true })
+                            }
+                        >
+                            Login
+                        </button>
                     </NavLink>
                 </ul>
             </div>

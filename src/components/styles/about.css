@@ -1,7 +1,6 @@
 .about-section_wrapper {
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
     justify-content: center;
     gap: 5em;
     min-height: 400px;
@@ -48,24 +47,25 @@
     .about-text {
         margin-left: 20px;
     }
-    .about-image {
-        margin-right: 20px;
-    }
 }
 
 @media (max-width: 820px) {
     .about-section_wrapper {
         flex-direction: column;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         text-align: center;
+        gap: 1em;
     }
     .about-text {
      margin-left: 0;
      max-width: 550px;
 
  }
- .about-image {
-     margin-right: 0;
- }
+}
+
+@media (max-width: 540px) {
+     .about-description-text {
+          padding: 1rem;
+     }
 }

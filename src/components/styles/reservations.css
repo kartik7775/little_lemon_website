@@ -1,0 +1,29 @@
+.reservations-container {
+     background-color: rgba(255, 217, 0, 0.1);
+     height: 60vh;
+}
+
+.form-field {
+     background-color: lightgray;
+     height: fit-content;
+     padding: 2rem;
+}
+
+form {
+     display: flex;
+     flex-direction: column;
+     max-width: 400px;
+     gap: 5px;
+}
+
+input, select {
+     border: none;
+     outline: none;
+     padding: 10px;
+     border-radius: 10px;
+     margin: 5px;
+}
+
+.submit-btn {
+     cursor: pointer;
+}

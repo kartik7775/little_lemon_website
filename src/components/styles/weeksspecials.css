@@ -81,9 +81,15 @@
     }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 780px) {
+    .menu-cards {
+        gap: 2em;
+    }
+}
+
+@media (max-width: 490px) {
     .title-and-online_btn {
-        flex-wrap: wrap;
+        flex-direction: column;
         margin-top: 5px;
         gap: 0;
     }

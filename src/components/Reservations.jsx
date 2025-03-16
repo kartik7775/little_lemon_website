@@ -1,11 +1,27 @@
+import { useState } from "react";
+import "./styles/reservations.css";
+import BookingConfirmation from "./BookingConfirmation";
+
 const Reservations = () => {
+    const [date, setDate] = useState("");
+    const [guests, setGuests] = useState("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const bookingDate = setDate();
+        const guestCount = setGuests();
+        bookingConfirmation();
     };
 
+    const bookingConfirmation = () => {
+        return (
+            <BookingConfirmation date={date} guests={guests} />
+        )
+    }
+
     return (
-        <section>
-            <div className="container">
+        <>
+            <div className="reservations-container">
                 <div className="header">
                     <h1 className="">Reservations</h1>
                     <p className="">
@@ -15,11 +31,20 @@ const Reservations = () => {
                 </div>
 
                 <div className="form-field">
+
+{/* {bookingConfirmation && <BookingConfirmation />} */}
+
                     <form action="" onSubmit={handleSubmit}>
-                        <label htmlFor="res-date">Choose date</label>
-                        <input type="date" id="res-date" />
-                        <label htmlFor="res-time">Choose time</label>
-                        <select id="res-time ">
+                        <label htmlFor="res-date">Select date</label>
+                        <input
+                            type="date"
+                            id="res-date"
+                            required
+                            onChange={(e) => setDate(e.target.value)}
+                        />
+
+                        <label htmlFor="res-time">Select time</label>
+                        <select id="res-time " required>
                             <option>17:00</option>
                             <option>17:30</option>
                             <option>18:00</option>
@@ -31,6 +56,7 @@ const Reservations = () => {
                             <option>22:30</option>
                             <option>23:00</option>
                         </select>
+
                         <label htmlFor="guests">Number of guests</label>
                         <input
                             type="number"
@@ -38,7 +64,10 @@ const Reservations = () => {
                             min={1}
                             max={10}
                             id="guests"
+                            required
+                            onChange={(e) => setGuests(e.target.value)}
                         />
+
                         <label htmlFor="occasion">Occasion</label>
                         <select id="occasion">
                             <option>Birthday</option>
@@ -47,14 +76,16 @@ const Reservations = () => {
                             <option>Casual Meeting</option>
                             <option>Other Special Occasion</option>
                         </select>
+
                         <input
+                            className="submit-btn"
                             type="submit"
                             defaultValue="Make Your reservation"
                         />
                     </form>
                 </div>
             </div>
-        </section>
+        </>
     );
 };
 

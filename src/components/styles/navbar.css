@@ -14,14 +14,25 @@ nav {
 /* .nav-list li:not(:last-child) {
     margin-right: 15px;
     } */
-    
-    .nav-list li {
-     list-style: none;
-     color: black;
-     text-decoration: none;
-     font-family: sans-serif;
-     cursor: pointer;
-     margin-left: 10px;
+
+.nav-list li {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+}
+
+.nav-list li {
+    border-bottom: 1px solid transparent;
+}
+.nav-list li:hover {
+    border-bottom: 1px solid gold;
 }
 
 /* a.active {
@@ -46,17 +57,17 @@ nav {
         position: relative;
     }
     .nav-list {
-        visibility: hidden;
+        /* visibility: hidden; */
         flex-direction: column;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 5px;
         background-color: rgba(245, 245, 245, 0.95);
         width: 170px;
         height: 300px;
         padding: 10px;
         border-radius: 10px;
         margin-top: 20px;
+        margin-right: 10px;
     }
-
 }
