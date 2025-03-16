@@ -54,3 +54,16 @@
     letter-spacing: 0.75px;
     color: #6c6c6c;
 }
+
+@media (max-width: 820px) {
+    .testimonials-section_wrapper {
+        margin-top: 20px;
+        padding-bottom: 10px;
+    }
+    .review-cards {
+        flex-wrap: wrap;
+    }
+    .section-heading {
+        margin: 15px;
+    }
+}

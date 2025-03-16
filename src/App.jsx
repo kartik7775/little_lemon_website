@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Login, OrderOnline } from "./components/index";
+import { Home, Reservations, Login, OrderOnline } from "./components/index";
 import {
     Route,
     RouterProvider,
@@ -13,6 +13,8 @@ function App() {
         createRoutesFromElements(
             <Route path="/" element={<RootLayout />}>
                 <Route index element={<Home />} />
+
+                <Route path="reservations" element={<Reservations />} />
 
                 <Route path="order-online" element={<OrderOnline />} />
 

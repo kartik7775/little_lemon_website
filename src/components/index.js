@@ -5,7 +5,8 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import WeeksSpecials from "../components/WeeksSpecials";
+import Reservations from "../components/Reservations";
 import Login from "../components/Login";
 import OrderOnline from "../components/OrderOnline";
 
-export { About, Navbar, Footer, Home, Hero, Testimonials, WeeksSpecials, Login, OrderOnline };
+export { About, Navbar, Footer, Home, Hero, Testimonials, WeeksSpecials, Reservations, Login, OrderOnline };

@@ -37,3 +37,26 @@ nav {
     font-size: 1rem;
     cursor: pointer;
 }
+
+@media (max-width: 650px) {
+    nav {
+        justify-content: space-between;
+    }
+    .navbar {
+        position: relative;
+    }
+    .nav-list {
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(245, 245, 245, 0.95);
+        width: 170px;
+        height: 300px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+}
