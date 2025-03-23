@@ -1,29 +1,50 @@
 .reservations-container {
-     background-color: rgba(255, 217, 0, 0.1);
-     height: 60vh;
+    background-color: rgba(255, 217, 0, 0.1);
+    padding: 10px;
+    min-height: 75vh;
 }
 
+.header {
+     text-align: center;
+     margin-bottom: 30px;
+}
 .form-field {
-     background-color: lightgray;
-     height: fit-content;
-     padding: 2rem;
+    background-color: rgb(174, 208, 247);
+    width: 500px;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 form {
-     display: flex;
-     flex-direction: column;
-     max-width: 400px;
-     gap: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 5px;
 }
 
-input, select {
-     border: none;
-     outline: none;
-     padding: 10px;
-     border-radius: 10px;
-     margin: 5px;
+input,
+select {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 .submit-btn {
-     cursor: pointer;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: lightgreen;
+}
+
+.submit-btn:hover {
+    background-color: rgb(94, 231, 94);
+}
+
+@media (max-width: 475px) {
+    .form-field {
+        width: 300px;
+    }
 }

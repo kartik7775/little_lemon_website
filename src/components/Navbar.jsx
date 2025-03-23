@@ -1,16 +1,22 @@
 import "./styles/navbar.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
 
 const Navbar = () => {
     const navigate = useNavigate();
+    const [showMenu, setShowMenu] = useState(false);
+    const handleMenuToggle = () => setShowMenu(!showMenu);
 
     return (
         <nav>
             <div className="logo">
-                <img src="src\assets\Logo.svg" alt="little-lemon" />
+                <NavLink to="/">
+                    <img src="src\assets\Logo.svg" alt="little-lemon" />
+                </NavLink>
             </div>
 
-            <div className="navbar">
+            <div className={showMenu ? "mobile-menu" : "web-menu"}>
                 <ul className="nav-list">
                     <NavLink to="/">
                         <li>Home</li>
@@ -37,6 +43,12 @@ const Navbar = () => {
                         </button>
                     </NavLink>
                 </ul>
+            </div>
+
+            <div className="mobile-menu">
+                <button onClick={handleMenuToggle}>
+                    <GiHamburgerMenu />
+                </button>
             </div>
         </nav>
     );

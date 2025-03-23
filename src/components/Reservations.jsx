@@ -1,23 +1,26 @@
 import { useState } from "react";
 import "./styles/reservations.css";
-import BookingConfirmation from "./BookingConfirmation";
 
 const Reservations = () => {
     const [date, setDate] = useState("");
     const [guests, setGuests] = useState("");
+    const [occasion, setOccasion] = useState("");
+    const [time, setTime] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const bookingDate = setDate();
-        const guestCount = setGuests();
         bookingConfirmation();
     };
 
     const bookingConfirmation = () => {
-        return (
-            <BookingConfirmation date={date} guests={guests} />
-        )
-    }
+        alert(
+            `Reservation confirmed for ${guests} guests on ${date} at ${time} `
+        );
+        setDate("");
+        setGuests("");
+        setOccasion("");
+        setTime("");
+    };
 
     return (
         <>
@@ -31,20 +34,23 @@ const Reservations = () => {
                 </div>
 
                 <div className="form-field">
-
-{/* {bookingConfirmation && <BookingConfirmation />} */}
-
                     <form action="" onSubmit={handleSubmit}>
-                        <label htmlFor="res-date">Select date</label>
+                        <label htmlFor="res-date">Date</label>
                         <input
                             type="date"
                             id="res-date"
                             required
+                            value={date}
                             onChange={(e) => setDate(e.target.value)}
                         />
 
-                        <label htmlFor="res-time">Select time</label>
-                        <select id="res-time " required>
+                        <label htmlFor="res-time">Time</label>
+                        <select
+                            id="res-time "
+                            required
+                            value={time}
+                            onChange={(e) => setTime(e.target.value)}
+                        >
                             <option>17:00</option>
                             <option>17:30</option>
                             <option>18:00</option>
@@ -65,11 +71,17 @@ const Reservations = () => {
                             max={10}
                             id="guests"
                             required
+                            value={guests}
                             onChange={(e) => setGuests(e.target.value)}
                         />
 
                         <label htmlFor="occasion">Occasion</label>
-                        <select id="occasion">
+                        <select
+                            id="occasion"
+                            value={occasion}
+                            onChange={(e) => setOccasion(e.target.value)}
+                        >
+                            <option>Select Occasion</option>
                             <option>Birthday</option>
                             <option>Anniversary</option>
                             <option>Business Party</option>
@@ -80,7 +92,7 @@ const Reservations = () => {
                         <input
                             className="submit-btn"
                             type="submit"
-                            defaultValue="Make Your reservation"
+                            value="Make Your reservation"
                         />
                     </form>
                 </div>
